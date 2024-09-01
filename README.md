@@ -25,18 +25,19 @@ go test -bench . -benchmem -benchtime=1s
 Example of result:
 
 ```bash
-generated slice with size 10000, max value 1000000000 in 3608431 nanoseconds / 3 milliseconds
+generated slice with size 10000, max value 1000000000 in 3761525 nanoseconds / 3 milliseconds
 goos: linux
 goarch: amd64
 pkg: github.com/robert216434/sorting-go
 cpu: 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
-Benchmark_MergeSort-16                      1328            878845 ns/op         1194626 B/op      10000 allocs/op
-Benchmark_NaiveSort-16                        15          73674240 ns/op           81920 B/op          1 allocs/op
-Benchmark_QuickSort-16                      2712            435525 ns/op           81920 B/op          1 allocs/op
-Benchmark_SlicePackage-16                   1442            794175 ns/op           81976 B/op          3 allocs/op
-Benchmark_SliceStablePackage-16              640           1845275 ns/op           81976 B/op          3 allocs/op
+Benchmark_MergeSort-16                      1296            889164 ns/op         1194630 B/op      10000 allocs/op
+Benchmark_NaiveSort-16                        15          73348896 ns/op           81920 B/op          1 allocs/op
+Benchmark_QuickSort-16                      2780            413782 ns/op           81920 B/op          1 allocs/op
+Benchmark_SlicePackage-16                   1480            787783 ns/op           81976 B/op          3 allocs/op
+Benchmark_SliceStablePackage-16              632           1858785 ns/op           81976 B/op          3 allocs/op
+Benchmark_SortFuncSlices-16                 1798            649498 ns/op           81920 B/op          1 allocs/op
 PASS
-ok      github.com/robert216434/sorting-go      6.281s
+ok      github.com/robert216434/sorting-go      7.482s
 ```
 
 ## How to interpret results
