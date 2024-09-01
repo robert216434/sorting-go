@@ -49,15 +49,15 @@ func Benchmark_QuickSort(b *testing.B) {
 	}
 }
 
-func Benchmark_SlicePackage(b *testing.B) {
+func Benchmark_SliceSortPackage(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		sortinggo.SlicePackage(getSliceCopy(sliceToSort))
+		sortinggo.SliceSortPackage(getSliceCopy(sliceToSort))
 	}
 }
 
-func Benchmark_SliceStablePackage(b *testing.B) {
+func Benchmark_SliceStableSortPackage(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		sortinggo.SliceStablePackage(getSliceCopy(sliceToSort))
+		sortinggo.SliceStableSortPackage(getSliceCopy(sliceToSort))
 	}
 }
 
