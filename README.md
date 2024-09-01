@@ -26,19 +26,20 @@ go test -bench . -benchmem -benchtime=1s
 Example of result:
 
 ```bash
-generated slice with size 10000, max value 1000000000 in 3551509 nanoseconds / 3 milliseconds
+generated slice with size 10000, max value 1000000000 in 3639947 nanoseconds / 3 milliseconds
 goos: linux
 goarch: amd64
 pkg: github.com/robert216434/sorting-go
 cpu: 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
-Benchmark_MergeSort-16                      1276            880931 ns/op         1194630 B/op      10000 allocs/op
-Benchmark_NaiveSort-16                        15          72972170 ns/op           81920 B/op          1 allocs/op
-Benchmark_QuickSort-16                      2746            417754 ns/op           81920 B/op          1 allocs/op
-Benchmark_SliceSortPackage-16               1446            779438 ns/op           81976 B/op          3 allocs/op
-Benchmark_SliceStableSortPackage-16          643           1858200 ns/op           81976 B/op          3 allocs/op
-Benchmark_SortFuncSlices-16                 1828            649187 ns/op           81920 B/op          1 allocs/op
+Benchmark_MergeSort-16                                      1286            932450 ns/op         1194635 B/op      10000 allocs/op
+Benchmark_NaiveSort-16                                        15          73782975 ns/op           81920 B/op          1 allocs/op
+Benchmark_QuickSort-16                                      2774            425028 ns/op           81920 B/op          1 allocs/op
+Benchmark_SliceSortPackage-16                               1468            789453 ns/op           81976 B/op          3 allocs/op
+Benchmark_SliceStableSortPackage-16                          639           1840999 ns/op           81976 B/op          3 allocs/op
+Benchmark_SortFuncSlicesSlicesPackage-16                    1803            651298 ns/op           81920 B/op          1 allocs/op
+Benchmark_SortStableFuncSlicesSlicesPackage-16               856           1387884 ns/op           81920 B/op          1 allocs/op
 PASS
-ok      github.com/robert216434/sorting-go      7.446s
+ok      github.com/robert216434/sorting-go      8.898s
 ```
 
 ## How to interpret results
