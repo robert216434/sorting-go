@@ -35,25 +35,25 @@ go test -bench . -benchmem -benchtime=1s
 Example of result:
 
 ```bash
-generated slice with size 10000, max value 1000000000 in 3680456 nanoseconds / 3 milliseconds
+generated slice with size 10000, max value 1000000000 in 3565650 nanoseconds / 3 milliseconds
 goos: linux
 goarch: amd64
 pkg: github.com/robert216434/sorting-go
 cpu: 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
-Benchmark_BubbleSort-16                                       24          47843150 ns/op           81920 B/op          1 allocs/op
-Benchmark_HeapSort-16                                       1575            748924 ns/op           81920 B/op          1 allocs/op
-Benchmark_InsertionSort-16                                   100          10018571 ns/op           81920 B/op          1 allocs/op
-Benchmark_MergeSort-16                                      1278            890244 ns/op         1194630 B/op      10000 allocs/op
-Benchmark_NaiveSort-16                                        15          70182863 ns/op           81920 B/op          1 allocs/op
-Benchmark_QuickSort-16                                      2749            427977 ns/op           81920 B/op          1 allocs/op
-Benchmark_RadixSort-16                                      1996            558941 ns/op          819202 B/op         10 allocs/op
-Benchmark_SelectionSort-16                                    32          34003523 ns/op           81920 B/op          1 allocs/op
-Benchmark_SliceSortPackage-16                               1440            797447 ns/op           81976 B/op          3 allocs/op
-Benchmark_SliceStableSortPackage-16                          637           1859706 ns/op           81976 B/op          3 allocs/op
-Benchmark_SortFuncSlicesSlicesPackage-16                    1777            662052 ns/op           81920 B/op          1 allocs/op
-Benchmark_SortStableFuncSlicesSlicesPackage-16               844           1412044 ns/op           81920 B/op          1 allocs/op
+Benchmark_BubbleSort-16                                       24          49411287 ns/op           81920 B/op          1 allocs/op
+Benchmark_HeapSort-16                                       1477            769568 ns/op           81920 B/op          1 allocs/op
+Benchmark_InsertionSort-16                                   100          10590063 ns/op           81920 B/op          1 allocs/op
+Benchmark_MergeSort-16                                      1287            883163 ns/op         1194630 B/op      10000 allocs/op
+Benchmark_NaiveSort-16                                        15          71454223 ns/op           81920 B/op          1 allocs/op
+Benchmark_QuickSort-16                                      2761            429635 ns/op           81920 B/op          1 allocs/op
+Benchmark_RadixSort-16                                      2077            545182 ns/op          819201 B/op         10 allocs/op
+Benchmark_SelectionSort-16                                    33          34204185 ns/op           81920 B/op          1 allocs/op
+Benchmark_SliceSortPackage-16                               1496            811720 ns/op           81976 B/op          3 allocs/op
+Benchmark_SliceStableSortPackage-16                          612           1967478 ns/op           81976 B/op          3 allocs/op
+Benchmark_SortFuncSlicesSlicesPackage-16                    1784            683641 ns/op           81920 B/op          1 allocs/op
+Benchmark_SortStableFuncSlicesSlicesPackage-16               818           1420863 ns/op           81920 B/op          1 allocs/op
 PASS
-ok      github.com/robert216434/sorting-go      14.559s
+ok      github.com/robert216434/sorting-go      14.808s
 ```
 
 ## How to interpret results
@@ -65,3 +65,7 @@ ok      github.com/robert216434/sorting-go      14.559s
 - `ns/op` means nanoseconds per operation, how much time it took per iteration. (**less** is better)
 - `B/op` means how many bytes were allocated per iteration. (**less** is better)
 - `allocs/op` means how many memory allocations occurred per iteration. (**less** is better)
+
+## Remarks
+
+Algorithms implementation might not be optimal. From the results in this specific usecase QuickSort is fastest.
