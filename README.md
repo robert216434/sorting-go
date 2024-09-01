@@ -20,6 +20,10 @@ List of algorithms currently in repository:
 - SortFunc (go standard library package [slices](https://pkg.go.dev/slices)), uses pattern-defeating quicksort (pdqsort)
 - SortStableFunc (go standard library package [slices](https://pkg.go.dev/slices)), uses insertion sort
 
+## Benchmark
+
+At init the benchmark generates a slice of size 10_000 with random integers between [0, 1_000_000_000] and passes a copy of the slice to each sorting algorithm benchmark.
+
 ## Running benchmark
 
 To run the benchmark and compare the algorithms performance on your machine, open terminal at the root of the repository and run:
