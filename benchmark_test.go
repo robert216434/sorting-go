@@ -49,3 +49,9 @@ func Benchmark_QuickSort(b *testing.B) {
 		sortinggo.QuickSort(getSliceCopy(sliceToSort))
 	}
 }
+
+func Benchmark_SliceStablePackage(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		sortinggo.SliceStablePackage(getSliceCopy(sliceToSort))
+	}
+}
