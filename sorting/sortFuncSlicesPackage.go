@@ -7,7 +7,7 @@ import (
 )
 
 // Uses pattern-defeating quicksort (pdqsort)
-func SortFuncSlices[V constraints.Ordered](slice []V) {
+func SortFuncSlicesPackage[V constraints.Ordered](slice []V) {
 	slices.SortFunc(slice, func(i, j V) int {
 		switch {
 		case i < j:

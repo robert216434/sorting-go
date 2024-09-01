@@ -61,8 +61,14 @@ func Benchmark_SliceStableSortPackage(b *testing.B) {
 	}
 }
 
-func Benchmark_SortFuncSlices(b *testing.B) {
+func Benchmark_SortFuncSlicesSlicesPackage(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		sortinggo.SortFuncSlices(getSliceCopy(sliceToSort))
+		sortinggo.SortFuncSlicesPackage(getSliceCopy(sliceToSort))
+	}
+}
+
+func Benchmark_SortStableFuncSlicesSlicesPackage(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		sortinggo.SortStableFuncSlicesPackage(getSliceCopy(sliceToSort))
 	}
 }
