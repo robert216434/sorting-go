@@ -33,13 +33,19 @@ func init() {
 }
 
 func Benchmark_MergeSort(b *testing.B) {
-	sortinggo.MergeSort(getSliceCopy(sliceToSort))
+	for i := 0; i < b.N; i++ {
+		sortinggo.MergeSort(getSliceCopy(sliceToSort))
+	}
 }
 
 func Benchmark_NaiveSort(b *testing.B) {
-	sortinggo.NaiveSort(getSliceCopy(sliceToSort))
+	for i := 0; i < b.N; i++ {
+		sortinggo.NaiveSort(getSliceCopy(sliceToSort))
+	}
 }
 
 func Benchmark_QuickSort(b *testing.B) {
-	sortinggo.QuickSort(getSliceCopy(sliceToSort))
+	for i := 0; i < b.N; i++ {
+		sortinggo.QuickSort(getSliceCopy(sliceToSort))
+	}
 }
