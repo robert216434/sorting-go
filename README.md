@@ -61,7 +61,8 @@ ok      github.com/robert216434/sorting-go      14.808s
 `iteration` is a for loop pass inside of `Benchmark` function. By default it tries to do `1_000_000_000` iterations in the given time.
 
 - First column is the name of the algorithm
-- Second column is how many iterations were made in the given time in `-benchtime`, default is 1 second. (**higher** is better)
+- Second column is how many iterations were made in the given time in `-benchtime`, default is 1 second. In other words, represents how many times the sorting algorithm managed to sort the slice in 1 second. (**higher** is better)
+
 - `ns/op` means nanoseconds per operation, how much time it took per iteration. (**less** is better)
 - `B/op` means how many bytes were allocated per iteration. (**less** is better)
 - `allocs/op` means how many memory allocations occurred per iteration. (**less** is better)
