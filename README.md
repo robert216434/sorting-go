@@ -32,28 +32,28 @@ To run the benchmark and compare the algorithms performance on your machine, ope
 go test -bench . -benchmem -benchtime=1s
 ```
 
-Example of result:
+Example of result from GitHub Actions runner:
 
 ```bash
-generated slice with size 10000, max value 1000000000 in 3565650 nanoseconds / 3 milliseconds
+generated slice with size 10000, max value 1000000000 in 8384579 nanoseconds / 8 milliseconds
 goos: linux
 goarch: amd64
 pkg: github.com/robert216434/sorting-go
-cpu: 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
-Benchmark_BubbleSort-16                                       24          49411287 ns/op           81920 B/op          1 allocs/op
-Benchmark_HeapSort-16                                       1477            769568 ns/op           81920 B/op          1 allocs/op
-Benchmark_InsertionSort-16                                   100          10590063 ns/op           81920 B/op          1 allocs/op
-Benchmark_MergeSort-16                                      1287            883163 ns/op         1194630 B/op      10000 allocs/op
-Benchmark_NaiveSort-16                                        15          71454223 ns/op           81920 B/op          1 allocs/op
-Benchmark_QuickSort-16                                      2761            429635 ns/op           81920 B/op          1 allocs/op
-Benchmark_RadixSort-16                                      2077            545182 ns/op          819201 B/op         10 allocs/op
-Benchmark_SelectionSort-16                                    33          34204185 ns/op           81920 B/op          1 allocs/op
-Benchmark_SliceSortPackage-16                               1496            811720 ns/op           81976 B/op          3 allocs/op
-Benchmark_SliceStableSortPackage-16                          612           1967478 ns/op           81976 B/op          3 allocs/op
-Benchmark_SortFuncSlicesSlicesPackage-16                    1784            683641 ns/op           81920 B/op          1 allocs/op
-Benchmark_SortStableFuncSlicesSlicesPackage-16               818           1420863 ns/op           81920 B/op          1 allocs/op
+cpu: AMD EPYC 7763 64-Core Processor
+Benchmark_BubbleSort-4                          	      13	  84588590 ns/op	   81920 B/op	       1 allocs/op
+Benchmark_HeapSort-4                            	    1302	    914729 ns/op	   81920 B/op	       1 allocs/op
+Benchmark_InsertionSort-4                       	      74	  15858771 ns/op	   81920 B/op	       1 allocs/op
+Benchmark_MergeSort-4                           	    1116	   1056431 ns/op	 1194633 B/op	   10000 allocs/op
+Benchmark_NaiveSort-4                           	      21	  54114159 ns/op	   81920 B/op	       1 allocs/op
+Benchmark_QuickSort-4                           	    2443	    481215 ns/op	   81920 B/op	       1 allocs/op
+Benchmark_RadixSort-4                           	    1845	    662291 ns/op	  819202 B/op	      10 allocs/op
+Benchmark_SelectionSort-4                       	      25	  47181361 ns/op	   81920 B/op	       1 allocs/op
+Benchmark_SliceSortPackage-4                    	    1254	    943232 ns/op	   81976 B/op	       3 allocs/op
+Benchmark_SliceStableSortPackage-4              	     518	   2278474 ns/op	   81976 B/op	       3 allocs/op
+Benchmark_SortFuncSlicesSlicesPackage-4         	    1419	    835150 ns/op	   81920 B/op	       1 allocs/op
+Benchmark_SortStableFuncSlicesSlicesPackage-4   	     680	   1750437 ns/op	   81920 B/op	       1 allocs/op
 PASS
-ok      github.com/robert216434/sorting-go      14.808s
+ok  	github.com/robert216434/sorting-go	15.232s
 ```
 
 ## How to interpret results
