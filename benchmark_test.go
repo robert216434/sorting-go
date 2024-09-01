@@ -35,3 +35,7 @@ func Benchmark_MergeSort(b *testing.B) {
 func Benchmark_NaiveSort(b *testing.B) {
 	sortinggo.NaiveSort(append([]int(nil), sliceToSort...))
 }
+
+func Benchmark_QuickSort(b *testing.B) {
+	sortinggo.QuickSort(append([]int(nil), sliceToSort...))
+}
