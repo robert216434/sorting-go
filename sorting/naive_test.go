@@ -3,7 +3,7 @@ package sortinggo_test
 import (
 	"testing"
 
-	sortinggo "github.com/robert216434/sorting-go"
+	sortinggo "github.com/robert216434/sorting-go/sorting"
 	"github.com/stretchr/testify/assert"
 )
 

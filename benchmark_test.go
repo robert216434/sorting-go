@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	sortinggo "github.com/robert216434/sorting-go"
+	sortinggo "github.com/robert216434/sorting-go/sorting"
 )
 
 // To run:
