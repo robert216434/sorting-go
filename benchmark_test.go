@@ -18,6 +18,10 @@ const maxValue = 1_000_000_000
 
 var sliceToSort = []int{}
 
+func getSliceCopy(slice []int) []int {
+	return append([]int(nil), slice...)
+}
+
 func init() {
 	start := time.Now()
 	for i := 0; i < sliceSize; i++ {
@@ -25,17 +29,17 @@ func init() {
 		sliceToSort = append(sliceToSort, int(genInt.Int64()))
 	}
 	end_time := time.Since(start)
-	fmt.Printf("generated slice with size %d, max value %d in %d nanoseconds\n", sliceSize, maxValue, end_time.Nanoseconds())
+	fmt.Printf("generated slice with size %d, max value %d in %d nanoseconds / %d milliseconds\n", sliceSize, maxValue, end_time.Nanoseconds(), end_time.Milliseconds())
 }
 
 func Benchmark_MergeSort(b *testing.B) {
-	sortinggo.MergeSort(append([]int(nil), sliceToSort...))
+	sortinggo.MergeSort(getSliceCopy(sliceToSort))
 }
 
 func Benchmark_NaiveSort(b *testing.B) {
-	sortinggo.NaiveSort(append([]int(nil), sliceToSort...))
+	sortinggo.NaiveSort(getSliceCopy(sliceToSort))
 }
 
 func Benchmark_QuickSort(b *testing.B) {
-	sortinggo.QuickSort(append([]int(nil), sliceToSort...))
+	sortinggo.QuickSort(getSliceCopy(sliceToSort))
 }
