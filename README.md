@@ -22,7 +22,7 @@ List of algorithms currently in repository:
 
 ## Benchmark
 
-At init the benchmark generates a slice of size 10_000 with random integers between [0, 1_000_000_000] and passes a copy of the slice to each sorting algorithm benchmark.
+At init the benchmark generates a slice of size `10_000` with random integers in range `[0, 1_000_000_000]` and passes a copy of the slice to each sorting algorithm benchmark.
 
 ## Running benchmark
 
