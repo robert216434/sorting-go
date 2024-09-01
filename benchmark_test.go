@@ -10,8 +10,7 @@ import (
 	sortinggo "github.com/robert216434/sorting-go/sorting"
 )
 
-// To run:
-// go test -bench . -benchmem
+// To run check https://github.com/robert216434/sorting-go?tab=readme-ov-file#running-benchmark
 
 const sliceSize = 10_000
 const maxValue = 1_000_000_000
