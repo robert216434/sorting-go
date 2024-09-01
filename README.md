@@ -10,8 +10,9 @@ List of algorithms currently in repository:
 - Merge sort
 - Quick sort
 - Naive sort
-- Slice (go standard library package [sort](https://pkg.go.dev/sort)), uses pattern-defeating quicksort (pdq)
+- Slice (go standard library package [sort](https://pkg.go.dev/sort)), uses pattern-defeating quicksort (pdqsort)
 - SliceStable (go standard library package [sort](https://pkg.go.dev/sort)), uses insertion sort
+- SortFunc (go standard library package [slices](https://pkg.go.dev/slices)), uses pattern-defeating quicksort(pdqsort)
 
 ## Running benchmark
 

@@ -6,7 +6,7 @@ import (
 	"golang.org/x/exp/constraints"
 )
 
-// Uses pattern-defeating quicksort (pdq)
+// Uses pattern-defeating quicksort (pdqsort)
 func SlicePackage[V constraints.Ordered](slice []V) {
 	sortPackage.Slice(slice, func(i, j int) bool {
 		return slice[i] < slice[j]
