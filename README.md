@@ -17,7 +17,7 @@ List of algorithms currently in repository:
 To run the benchmark and compare the algorithms performance, open terminal and run:
 
 ```bash
-go test -bench . -benchmem
+go test -bench . -benchmem -benchtime=1s
 ```
 
 Example of result:
@@ -39,7 +39,7 @@ ok      github.com/robert216434/sorting-go      5.083s
 ## How to interpret results
 
 - First column is the name of the algorithm
-- Second column is how many iterations were made to obtain the statistics.
+- Second column is how many iterations were made in the given time in `-benchtime`, default is 1 second. (higher is better)
 - `ns/op` means nanoseconds per operation, how much time it took per iteration. (less is better)
 - `B/op` means how many bytes were allocated per iteration. (less is better)
 - `allocs/op` means how many memory allocations occurred per iteration. (less is better)
