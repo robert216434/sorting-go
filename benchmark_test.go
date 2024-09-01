@@ -37,6 +37,12 @@ func Benchmark_BubbleSort(b *testing.B) {
 	}
 }
 
+func Benchmark_HeapSort(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		sortinggo.HeapSort(getSliceCopy(sliceToSort))
+	}
+}
+
 func Benchmark_InsertionSort(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		sortinggo.InsertionSort(getSliceCopy(sliceToSort))
