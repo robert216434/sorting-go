@@ -50,6 +50,12 @@ func Benchmark_QuickSort(b *testing.B) {
 	}
 }
 
+func Benchmark_SlicePackage(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		sortinggo.SlicePackage(getSliceCopy(sliceToSort))
+	}
+}
+
 func Benchmark_SliceStablePackage(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		sortinggo.SliceStablePackage(getSliceCopy(sliceToSort))
