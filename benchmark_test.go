@@ -31,6 +31,12 @@ func init() {
 	fmt.Printf("generated slice with size %d, max value %d in %d nanoseconds / %d milliseconds\n", sliceSize, maxValue, end_time.Nanoseconds(), end_time.Milliseconds())
 }
 
+func Benchmark_InsertionSort(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		sortinggo.InsertionSort(getSliceCopy(sliceToSort))
+	}
+}
+
 func Benchmark_MergeSort(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		sortinggo.MergeSort(getSliceCopy(sliceToSort))

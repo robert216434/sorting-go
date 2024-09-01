@@ -7,6 +7,7 @@ Benchmark included.
 
 List of algorithms currently in repository:
 
+- Insertion sort
 - Merge sort
 - Naive sort
 - Quick sort
@@ -27,21 +28,22 @@ go test -bench . -benchmem -benchtime=1s
 Example of result:
 
 ```bash
-generated slice with size 10000, max value 1000000000 in 4269465 nanoseconds / 4 milliseconds
+generated slice with size 10000, max value 1000000000 in 3837493 nanoseconds / 3 milliseconds
 goos: linux
 goarch: amd64
 pkg: github.com/robert216434/sorting-go
 cpu: 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
-Benchmark_MergeSort-16                                      1268            875360 ns/op         1194626 B/op      10000 allocs/op
-Benchmark_NaiveSort-16                                        15          72644014 ns/op           81920 B/op          1 allocs/op
-Benchmark_QuickSort-16                                      2670            422469 ns/op           81920 B/op          1 allocs/op
-Benchmark_SelectionSort-16                                    33          34135060 ns/op           81920 B/op          1 allocs/op
-Benchmark_SliceSortPackage-16                               1462            795373 ns/op           81976 B/op          3 allocs/op
-Benchmark_SliceStableSortPackage-16                          640           1858454 ns/op           81976 B/op          3 allocs/op
-Benchmark_SortFuncSlicesSlicesPackage-16                    1760            656272 ns/op           81920 B/op          1 allocs/op
-Benchmark_SortStableFuncSlicesSlicesPackage-16               829           1413950 ns/op           81920 B/op          1 allocs/op
+Benchmark_InsertionSort-16                                   120          10435478 ns/op           81920 B/op          1 allocs/op
+Benchmark_MergeSort-16                                      1310            881597 ns/op         1194629 B/op      10000 allocs/op
+Benchmark_NaiveSort-16                                        16          69780081 ns/op           81920 B/op          1 allocs/op
+Benchmark_QuickSort-16                                      2700            426045 ns/op           81920 B/op          1 allocs/op
+Benchmark_SelectionSort-16                                    32          34345285 ns/op           81920 B/op          1 allocs/op
+Benchmark_SliceSortPackage-16                               1422            804850 ns/op           81976 B/op          3 allocs/op
+Benchmark_SliceStableSortPackage-16                          648           1849014 ns/op           81976 B/op          3 allocs/op
+Benchmark_SortFuncSlicesSlicesPackage-16                    1768            651775 ns/op           81920 B/op          1 allocs/op
+Benchmark_SortStableFuncSlicesSlicesPackage-16               828           1407294 ns/op           81920 B/op          1 allocs/op
 PASS
-ok      github.com/robert216434/sorting-go      9.896s
+ok      github.com/robert216434/sorting-go      12.195s
 ```
 
 ## How to interpret results

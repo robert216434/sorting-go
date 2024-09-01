@@ -3,10 +3,6 @@ package sortinggo
 import "golang.org/x/exp/constraints"
 
 func SelectionSort[V constraints.Ordered](slice []V) {
-	selection(slice)
-}
-
-func selection[V constraints.Ordered](slice []V) {
 	n := len(slice)
 	for i := 0; i < n-1; i++ {
 		min_idx := i
