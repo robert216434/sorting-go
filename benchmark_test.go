@@ -67,6 +67,12 @@ func Benchmark_QuickSort(b *testing.B) {
 	}
 }
 
+func Benchmark_RadixSort(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		sortinggo.RadixSort(getSliceCopy(sliceToSort))
+	}
+}
+
 func Benchmark_SelectionSort(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		sortinggo.SelectionSort(getSliceCopy(sliceToSort))
