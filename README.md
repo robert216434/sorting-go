@@ -15,7 +15,7 @@ List of algorithms currently in repository:
 
 ## Running benchmark
 
-To run the benchmark and compare the algorithms performance, open terminal at the root of the repository and run:
+To run the benchmark and compare the algorithms performance on your machine, open terminal at the root of the repository and run:
 
 ```bash
 go test -bench . -benchmem -benchtime=1s
