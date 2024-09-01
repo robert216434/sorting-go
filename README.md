@@ -40,6 +40,8 @@ ok      github.com/robert216434/sorting-go      6.281s
 
 ## How to interpret results
 
+`iteration` is a for loop pass inside of `Benchmark` function. By default it tries to do `1_000_000_000` iterations in the given time.
+
 - First column is the name of the algorithm
 - Second column is how many iterations were made in the given time in `-benchtime`, default is 1 second. (**higher** is better)
 - `ns/op` means nanoseconds per operation, how much time it took per iteration. (**less** is better)

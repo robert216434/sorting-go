@@ -60,3 +60,9 @@ func Benchmark_SliceStablePackage(b *testing.B) {
 		sortinggo.SliceStablePackage(getSliceCopy(sliceToSort))
 	}
 }
+
+func Benchmark_Test(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+
+	}
+}
