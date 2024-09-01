@@ -14,7 +14,7 @@ List of algorithms currently in repository:
 - Selection sort
 - Slice (go standard library package [sort](https://pkg.go.dev/sort)), uses pattern-defeating quicksort (pdqsort)
 - SliceStable (go standard library package [sort](https://pkg.go.dev/sort)), uses insertion sort
-- SortFunc (go standard library package [slices](https://pkg.go.dev/slices)), uses pattern-defeating quicksort(pdqsort)
+- SortFunc (go standard library package [slices](https://pkg.go.dev/slices)), uses pattern-defeating quicksort (pdqsort)
 - SortStableFunc (go standard library package [slices](https://pkg.go.dev/slices)), uses insertion sort
 
 ## Running benchmark
