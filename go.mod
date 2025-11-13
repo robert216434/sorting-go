@@ -1,10 +1,10 @@
 module github.com/robert216434/sorting-go
 
-go 1.23.0
+go 1.25
 
 require (
 	github.com/stretchr/testify v1.11.1
-	golang.org/x/exp v0.0.0-20240823005443-9b4947da3948
+	golang.org/x/exp v0.0.0-20251113190631-e25ba8c21ef6
 )
 
 require (
